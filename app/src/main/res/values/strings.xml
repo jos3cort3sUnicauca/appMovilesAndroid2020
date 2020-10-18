@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">appMovilesUnicauca2020</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tv_title_login">Login in to EnterThing</string>
+    <string name="tv_title_register">Register on EnterThing</string>
+    <string name="et_mail">Email</string>
+    <string name="et_username">Username</string>
+    <string name="et_password">Password</string>
+    <string name="et_repeat_password">Repeat Password</string>
+    <string name="et_phone_number">Phone Number</string>
+    <string name="btn_remember">Remember</string>
+    <string name="btn_forgotten">Forgotten your password ?</string>
+    <string name="btn_login">Login</string>
+    <string name="btn_register">Register</string>
+
+    <!-- SharePreferences values -->
+    <string name="key_mSharePreferences">mKeyShare</string>
+    <string name="key_register_boolean">mKeyBoolean</string>
+
+    <!-- Menu main values -->
+    <string name="itemOneMenu">Perfil</string>
+    <string name="itemTwoMenu">Log out</string>
+
+    <!-- Label Activities -->
+    <string name="label_main_activity">Main</string>
+
+
+</resources>
