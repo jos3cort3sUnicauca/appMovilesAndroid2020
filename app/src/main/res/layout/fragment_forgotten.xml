@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.RegisterFragment">
+    tools:context=".fragment.ForgottenFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -34,58 +34,31 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:gravity="center"
-                    android:text="@string/tv_title_register"
+                    android:text="@string/tv_forgotten_activity"
                     android:textSize="25dp"
                     android:textStyle="bold|italic" />
 
                 <EditText
-                    android:id="@+id/etNameRegister"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:hint="@string/et_username"
-                    android:inputType="textCapWords" />
-
-                <EditText
-                    android:id="@+id/etEmailRegister"
+                    android:id="@+id/etMailForgotten"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:hint="@string/et_mail"
                     android:inputType="textEmailAddress" />
 
-                <EditText
-                    android:id="@+id/etPhoneRegister"
+                <TextView
+                    android:id="@+id/tvPassForgotten"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:hint="@string/et_phone_number"
-                    android:inputType="phone" />
-
-                <EditText
-                    android:id="@+id/etPassRegister"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:hint="@string/et_password"
-                    android:inputType="textPassword" />
-
-                <EditText
-                    android:id="@+id/etPassRegisterTwo"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:hint="@string/et_repeat_password"
-                    android:inputType="textPassword" />
-
+                    android:layout_margin="5dp" />
 
                 <Button
-                    android:id="@+id/btnRegisterRegister"
+                    android:id="@+id/btnRememberForgotten"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:background="@drawable/my_desing_button_login"
-                    android:text="@string/btn_register"
+                    android:text="@string/btn_forgotten_activity"
                     android:textColor="@color/white" />
 
 

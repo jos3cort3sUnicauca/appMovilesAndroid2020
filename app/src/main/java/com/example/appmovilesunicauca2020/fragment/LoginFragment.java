@@ -2,16 +2,15 @@ package com.example.appmovilesunicauca2020.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Switch;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
 
 import com.example.appmovilesunicauca2020.R;
 
@@ -70,28 +69,33 @@ public class LoginFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View viewLogin  = inflater.inflate(R.layout.fragment_login, container, false);
+        View viewLogin = inflater.inflate(R.layout.fragment_login, container, false);
         addId(viewLogin);
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    String [] valuesEditText = {etMailLogin.getText().toString(), etPasswordLogin.getText().toString()};
-                    interfaceListener.onEventButtons(R.id.btn_login, valuesEditText, btnRememberLogin.isChecked());
-                }
-            });
+                String[] valuesEditText = {etMailLogin.getText().toString(), etPasswordLogin.getText().toString()};
+                interfaceListener.onEventFragLogin(R.id.btn_login, valuesEditText, btnRememberLogin.isChecked());
+            }
+        });
 
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                interfaceListener.onEventButtons(R.id.btn_register);
+                interfaceListener.onEventFragLogin(R.id.btn_register);
             }
         });
 
-
+        btnForgottenPassLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                interfaceListener.onEventFragLogin(R.id.btn_forgotten_login);
+            }
+        });
         return viewLogin;
     }
 
-    public void addId(View view){
+    public void addId(View view) {
         etMailLogin = view.findViewById(R.id.et_mail_login);
         etPasswordLogin = view.findViewById(R.id.et_pass_login);
         btnRememberLogin = view.findViewById(R.id.btn_remember_login);
@@ -101,19 +105,19 @@ public class LoginFragment extends Fragment {
     }
 
 
+    public interface OnEventInterfaceFragLogin {
+        void onEventFragLogin(int idButton);
 
-
-    public interface MyOnEventListener{
-        void onEventButtons(int idButton);
-        void onEventButtons(int idButton, String [] valuesEditTex, boolean checkedRemember);
+        void onEventFragLogin(int idButton, String[] valuesEditTex, boolean checkedRemember);
     }
-    MyOnEventListener interfaceListener;
+
+    OnEventInterfaceFragLogin interfaceListener;
 
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
         try {
-            interfaceListener = (MyOnEventListener) context;
+            interfaceListener = (OnEventInterfaceFragLogin) context;
         } catch (ClassCastException e) {
             throw new ClassCastException(context.toString() + " must implement OnEventClickListener");
         }

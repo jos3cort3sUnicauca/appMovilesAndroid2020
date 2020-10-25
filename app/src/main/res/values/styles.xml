@@ -11,6 +11,7 @@
     <style name="AppThemeMain" parent="Theme.AppCompat"/>
 
 
+    <!--Style splash screen for login -->
     <style name="AppThemeSplash" parent="AppTheme">
         <item name="android:windowBackground">@drawable/my_splash_screen</item>
     </style>

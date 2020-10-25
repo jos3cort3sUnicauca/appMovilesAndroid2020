@@ -13,6 +13,8 @@
     <string name="btn_forgotten">Forgotten your password ?</string>
     <string name="btn_login">Login</string>
     <string name="btn_register">Register</string>
+    <string name="tv_forgotten_activity">Remember your Password</string>
+    <string name="btn_forgotten_activity">Remember</string>
 
     <!-- SharePreferences values -->
     <string name="key_mSharePreferences">mKeyShare</string>
@@ -23,7 +25,7 @@
     <string name="itemTwoMenu">Log out</string>
 
     <!-- Label Activities -->
-    <string name="label_main_activity">Main</string>
+    <string name="label_main_activity">EnterThing</string>
 
 
 </resources>
